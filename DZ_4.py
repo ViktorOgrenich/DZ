@@ -56,7 +56,8 @@ def now():
 
 t_d_nuw = []
 while i != 0:
-    t_d_nuw += [time.sleep(1), now()]
+    time.sleep(1)
+    t_d_nuw += [now()]
     i -= 1
 print(t_d_nuw)
 
