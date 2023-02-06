@@ -14,10 +14,10 @@ d = c.decode('Latin1')
 print('Latin1: ', d)
 
 # 6.2 ввести 4 строки, сохранить в 4 переменные, записать в файл
-str1 = input('Введите первую строку: ')
-str2 = input('Введите вторую строку: ')
-str3 = input('Введите третью строку: ')
-str4 = input('Введите четвертую строку: ')
+str1 = str(random.randint(100, 9999))
+str2 = str(random.randint(100, 9999))
+str3 = str(random.randint(100, 9999))
+str4 = str(random.randint(100, 9999))
 file_x = open('1.txt', 'w')
 file_x.write(str1 + '\n' + str2 + '\n')
 file_x.close()
@@ -33,7 +33,7 @@ prime = {(999999-n):(name[n], age[n]) for n in range(5)}
 with open ('ttes.json', 'w') as file_y:
     json.dump(prime, file_y)
     file_y.close()
-
+5
 #6.4 прочитать сохраненный файл, и записать данные на диск в csv-файл, первой строкой озаглавив каждый столбец,
 # и добавить новый столбец "телефон"
 
@@ -53,6 +53,11 @@ with open('ttes.csv', 'w') as file_r:
     file_r.close()
 print(temp_f)
 print(temp_e)
+
+#6.5 прочитать csv-файл и сохранить данные в excel файл, кроме возраста.
+with open('ttes.json', 'r') as file_y:
+    temp_f = json.load(file_y)
+    file_y.close()
 
 
 
